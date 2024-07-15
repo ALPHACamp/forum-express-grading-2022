@@ -1,0 +1,46 @@
+<h1>餐廳後台</h1>
+<nav class="nav">
+  <a class="nav-link px-0" href="/admin/restaurants">Restaurants</a>
+  <a class="nav-link disabled px-1">|</a>
+  <a class="nav-link px-0" href="/admin/users">Users</a>
+</nav>
+<br />
+<br />
+<table class="table align-middle">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">#</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.email}}</td>
+      <td>
+        {{#if this.isAdmin}}
+        admin
+        {{else}}
+        user
+        {{/if}}
+      </td>
+      <td>
+        <form action="/admin/users/{{this.id}}?_method=PATCH" method="POST">
+          <button type="submit" class="btn btn-link">
+            {{#if this.isAdmin}}
+            set as user
+            {{else}}
+            set as admin
+            {{/if}}
+          </button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
