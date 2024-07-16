@@ -3,6 +3,14 @@
   <input class="form-control" type="text" name="name" id="name" placeholder="Enter name" value="{{restaurant.name}}" required>
 </div>
 <div class="form-row mb-3">
+  <label class="form-label" for="categoryId">Category</label>
+  <select class="form-control" id="categoryId" name="categoryId">
+    {{#each categories}}
+    <option value="{{this.id}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+</div>
+<div class="form-row mb-3">
   <label class="form-label" for="tel">Tel</label>
   <input class="form-control" type="text" name="tel" id="tel" placeholder="Enter tel" value="{{restaurant.tel}}">
 </div>
