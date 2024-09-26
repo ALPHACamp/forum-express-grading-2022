@@ -13,8 +13,22 @@
     "url": "git+https://github.com/ALPHACamp/forum-express-grading.git"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "dayjs": "^1.10.6",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
+    "faker": "^5.5.3",
+    "imgur": "^1.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.3",
     "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
     "sequelize": "^6.3.5",
     "sequelize-cli": "^6.2.0"
   },
